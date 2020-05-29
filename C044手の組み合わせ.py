@@ -1,11 +1,11 @@
 # coding: utf-8
 
-Number = int(input())
+number = int(input())
 
 hands_count = { 'paper':0, 'rock':0, 'scissors':0 }
 win_or_lose = { 'paper':'rock', 'rock':'scissors', 'scissors':'paper'}
 
-for i in range(Number):
+for i in range(number):
     hands_count[input()] += 1
 
 remain_count = 0
