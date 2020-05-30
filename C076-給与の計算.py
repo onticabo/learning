@@ -1,7 +1,4 @@
 # coding: utf-8
-# Your code here!
-
-# coding: utf-8
 
 day_pay, night_pay, midnight_pay = map(int, input().split())
 
