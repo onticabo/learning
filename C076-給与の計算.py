@@ -35,6 +35,5 @@ for i in range(days):
             total += (MIDNIGHT_START - start) * night_pay + (end - MIDNIGHT_START) * midnight_pay
         else:
             total += (end - start) * midnight_pay
-#    print(total)
 
 print(total)
