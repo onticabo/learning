@@ -1,7 +1,7 @@
 # coding: utf-8
 
-def walk(x, y):
-    move = {'U':[0, -1], 'D':[0, 1], 'L':[-1, 0], 'R':[1, 0], } #方向ごと増分
+def move(x, y):
+    step = {'U':[0, -1], 'D':[0, 1], 'L':[-1, 0], 'R':[1, 0], } #方向ごと増分
 
     arrow = wind_map[y][x]  # 方向を取得
     wind_map[y][x] = 'N'    # 通過済みのマーク
@@ -9,8 +9,8 @@ def walk(x, y):
     if arrow == 'N':        # 通過済み座標なら無効
         x, y = -1, -1
     else:
-        x += move[arrow][0] # 次の座標を求める
-        y += move[arrow][1]
+        x += step[arrow][0] # 次の座標を求める
+        y += step[arrow][1]
 
     return([x, y])          # 新しい座標を返す
 
@@ -25,7 +25,7 @@ for i in range(h):
         root = []
         while 0 <= x < w and 0 <= y < h:    # 座標がマップの範囲内
             root.append([x, y])             # 通過座標の履歴を残す
-            x, y = walk(x, y)
+            x, y = move(x, y)
             if [x, y] in root:  # すでに通った座標なら渦
                 count += 1
                 break
