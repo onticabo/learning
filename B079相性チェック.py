@@ -1,4 +1,5 @@
 # coding: utf-8
+# from my_input import input
 
 def uranai(first, second):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
@@ -20,5 +21,4 @@ male, female = input().split()
 result1 = uranai(male, female)
 result2 = uranai(female, male)
 
-result = result1 if result1 > result2 else result2
-print(result)
+print(max([result1, result2]))
