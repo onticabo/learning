@@ -17,8 +17,8 @@ def isLuckyDay(m, d, w, x, y, z):
         if c in cards:
             cards.remove(c)
         else:
-            return(False)
-    return(True)
+            return False
+    return True
     
 month, day = input().split()
 

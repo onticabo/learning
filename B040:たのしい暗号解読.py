@@ -1,5 +1,5 @@
 # coding: utf-8
-from my_input import input
+# from my_input import input
 
 decode_time, table = input().split()
 code = input()
