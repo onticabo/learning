@@ -1,5 +1,5 @@
 # coding: utf-8
-# Your code here!
+from my_input import input
 
 def add_stock(query):
     for i in range(len(query)):
