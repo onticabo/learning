@@ -12,19 +12,18 @@ def next_vacant(pos, ring):
 
 ## main
 
-bosh_count, rabbits, turns = map(int, input().split())
-bosh = [0] * bosh_count
+brush_count, rabbits, turns = map(int, input().split())
+brush = [0] * brush_count
 
 for i in range(1, rabbits + 1):
-    bosh[int(input()) - 1] = i
+    brush[int(input()) - 1] = i
 
 for _ in range(turns):
     for i in range(1, rabbits + 1):
-        current_pos = bosh.index(i)
-        next_pos = next_vacant(current_pos, bosh)
-        bosh[current_pos] = 0
-        bosh[next_pos] = i
+        current_pos = brush.index(i)
+        next_pos = next_vacant(current_pos, brush)
+        brush[current_pos] = 0
+        brush[next_pos] = i
 
 for i in range(1, rabbits + 1):
-    print(bosh.index(i) + 1)
-
+    print(brush.index(i) + 1)
