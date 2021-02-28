@@ -28,17 +28,22 @@ class Segments:
         self.swap_lit(1, 5)
         self.swap_lit(2, 4)
         return self
+    def show(self):
+        print(' ' + '_' if self.lit[0] == '1' else ' ' + ' ')
+        print(('|' if self.lit[5] == '1' else ' ') + ('_' if self.lit[6] == '1' else ' ') + ('|' if self.lit[1] == '1' else ' '))
+        print(('|' if self.lit[4] == '1' else ' ') + ('_' if self.lit[3] == '1' else ' ') + ('|' if self.lit[2] == '1' else ' '))
+        print()
+    
+
 
 def judge_correct_numbers(num1, num2):
     print('Yes' if num1.is_correct_number() and num2.is_correct_number() else 'No') 
 
 ## main
 digit1 = list(input().split())
-digit2 = list(input().split())
-## stay
-seg1, seg2 = Segments(digit1), Segments(digit2)
-judge_correct_numbers(Segments(digit1), Segments(digit2))
-## reflect
-judge_correct_numbers(Segments(digit1).reflect(), Segments(digit2).reflect())
-## rotate
-judge_correct_numbers(Segments(digit1).rotate(), Segments(digit2).rotate())
+stay, ref, rot = Segments(digit1), Segments(digit1), Segments(digit1)
+print(id(stay), id(ref), id(rot))
+stay.show()
+ref.reflect().show()
+rot.rotate().show()
+print(id(stay), id(ref), id(rot))
