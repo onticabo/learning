@@ -1,11 +1,9 @@
-10 3
-work
-off
-off
-work
-work
-work
-off
-work
-work
-off
+5 5
+##.##
+#####
+.##.#
+###.#
+##.##
+2
+3 4
+5 3
